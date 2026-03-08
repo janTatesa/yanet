@@ -199,10 +199,10 @@ pub type Result<T, E = Report> = result::Result<T, E>;
 #[macro_export]
 macro_rules! yanet {
     ($err:expr $(,)?) => ({
-        Report::new(err)
+        yanet::Report::new(err)
     });
     ($fmt:literal, $($arg:tt)*) => {
-        Report::new(format!($fmt, $($arg)*))
+        yanet::Report::new(format!($fmt, $($arg)*))
     };
     ($err:expr, $msg:expr) => {
         $err.wrap($msg)
