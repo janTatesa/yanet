@@ -1,0 +1,13 @@
+[package]
+name = "yanet"
+version = "0.1.0"
+edition = "2024"
+description = "Yet ANother Error Tracer"
+authors = ["janTatesa"]
+
+[dependencies]
+owo-colors = { version = "4.3.0", optional = true }
+
+[features]
+colors = ["dep:owo-colors"]
+
